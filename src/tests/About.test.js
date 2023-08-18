@@ -1,21 +1,30 @@
 import { render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
-import userEvent from '@testing-library/user-event';
-import App from '../App';
+// import userEvent from '@testing-library/user-event';
+// import App from '../App';
+import About from '../pages/About';
 
 describe('Testando o componente About', () => {
-  test('Testando se a página contém as informações sobre a Pokédex', async () => {
+  test('Testando se a página contém as informações sobre a Pokédex', () => {
     render(
       <BrowserRouter>
-        <App />
+        <About />
       </BrowserRouter>,
     );
-    const linkAbout = screen.getByRole('link', { name: /about/i})
-    userEvent.click(linkAbout);
 
-    const textPokedex = await screen.findByText(/About Pokédex/i);
+    const textPokedex = screen.queryByText(/About Pokédex/i);
 
     expect(textPokedex).toBeInTheDocument();
+  });
+  test('tentando se a pagina contem dois paragrafos com texto sobre pokedex', () => {
+    render(
+      <BrowserRouter>
+        <About />
+      </BrowserRouter>,
+    );
+
+    const paragraf = screen.queryAllByText(/Pokémons/i);
+    expect(paragraf).toHaveLength(2);
   });
 });
