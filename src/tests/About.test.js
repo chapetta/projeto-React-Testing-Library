@@ -27,4 +27,16 @@ describe('Testando o componente About', () => {
     const paragraf = screen.queryAllByText(/Pokémons/i);
     expect(paragraf).toHaveLength(2);
   });
+  test('tentando se a pagina contem uma imagem de uma pokedex', () => {
+    render(
+      <BrowserRouter>
+        <About />
+      </BrowserRouter>,
+    );
+
+    const URL_IMAGE = 'https://cdn2.bulbagarden.net/upload/thumb/8/86/Gen_I_Pok%C3%A9dex.png/800px-Gen_I_Pok%C3%A9dex.png';
+    const image = screen.queryByAltText(/Pokédex/i);
+
+    expect(image.src).toBe(URL_IMAGE);
+  });
 });
