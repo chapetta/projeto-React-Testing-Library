@@ -14,4 +14,18 @@ describe('Testando o componente NotFound.js', () => {
     const textNotFound = screen.queryByRole('heading', { name: /Page requested/i });
     expect(textNotFound).toBeInTheDocument();
   });
+  test('Testando se a pagina mostra uma imagem especifica', () => {
+    render(
+      <BrowserRouter>
+        <NotFound />
+      </BrowserRouter>,
+    );
+
+    const URL_IMAGE = 'https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif';
+
+    const image = screen.queryByAltText(/pikachu crying/i);
+
+    expect(image.src).toBe(URL_IMAGE);
+    expect(image).toBeInTheDocument();
+  });
 });
