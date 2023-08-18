@@ -55,4 +55,27 @@ describe('Testando o componente Pokedex.js', () => {
 
     expect(typePokemon).toHaveTextContent('Fire');
   });
+  test('Teste se a Pokédex contém um botão para resetar o filtro', () => {
+    render(
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>,
+    );
+
+    const allButton = screen.queryByText('All');
+    expect(allButton).toBeInTheDocument();
+
+    const typesButton = screen.queryAllByTestId('pokemon-type-button');
+    expect(typesButton[1]).toHaveTextContent('Fire');
+
+    userEvent.click(typesButton[1]);
+
+    const typePokemon = screen.queryByTestId('pokemon-type');
+    expect(typePokemon).toHaveTextContent('Fire');
+
+    userEvent.click(allButton);
+
+    const pikachu = screen.queryByText('Pikachu');
+    expect(pikachu).toBeInTheDocument();
+  });
 });
