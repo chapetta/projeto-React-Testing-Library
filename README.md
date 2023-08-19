@@ -29,7 +29,7 @@ Nesse projeto escrevi testes para uma aplicação React que já está criada e c
     Teste se a aplicação é redirecionada para a página Not Found ao entrar em uma URL desconhecida.
 
 
-2. Teste o componente About.js
+2. Teste o componente About.js<br><br>
 
     Teste se a página contém as informações sobre a Pokédex;<br>
     Teste se a página contém um heading h2 com o texto About Pokédex;<br>
@@ -39,17 +39,19 @@ Nesse projeto escrevi testes para uma aplicação React que já está criada e c
 
 
 
-3.  Teste o componente FavoritePokemons.js
+3.  Teste o componente FavoritePokemons.js<br><br>
+
 
     Teste se é exibida na tela a mensagem No favorite pokemon found, caso a pessoa não tenha pokémons favoritos;<br>
     Teste se são exibidos todos os cards de pokémons favoritados.<br>
     
-    4. Teste o componente NotFound.js
+4. Teste o componente NotFound.js<br><br>
+
     
     Teste se a página contém um heading h2 com o texto Page requested not found 😭;<br>
     Teste se a página mostra a imagem https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif.<br>
 
-5. Teste o componente Pokedex.js
+5. Teste o componente Pokedex.js<br><br>
 
     Teste se a página contém um heading h2 com o texto Encountered pokémons;<br>
     Teste se é exibido o próximo pokémon da lista quando o botão Próximo pokémon é clicado:<br>
@@ -57,7 +59,7 @@ Nesse projeto escrevi testes para uma aplicação React que já está criada e c
     Teste se a Pokédex tem os botões de filtro:<br>
     Teste se a Pokédex contém um botão para resetar o filtro:<br>
 
-6.  Teste o componente Pokemon.js
+6.  Teste o componente Pokemon.js<br><br>
 
     Teste se é renderizado um card com as informações de determinado pokémon:
     Teste se o card do pokémon indicado na Pokédex contém um link de navegação para exibir detalhes deste pokémon. O link deve possuir a URL /pokemons/<id>, onde <id> é o id do pokémon exibido;<br>
@@ -65,7 +67,7 @@ Nesse projeto escrevi testes para uma aplicação React que já está criada e c
     Teste também se a URL exibida no navegador muda para /pokemon/<id>, onde <id> é o id do pokémon cujos detalhes se deseja ver;<br>
     Teste se existe um ícone de estrela nos pokémons favoritados:<br>
 
-7. Teste o componente PokemonDetails.js
+7. Teste o componente PokemonDetails.js<br><br>
 
     Teste se as informações detalhadas do pokémon selecionado são mostradas na tela:<br>
     Teste se existe na página uma seção com os mapas contendo as localizações do pokémon:<br>
