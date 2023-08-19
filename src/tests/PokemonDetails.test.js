@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { queryAllByAltText, render, screen } from '@testing-library/react';
 import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import userEvent from '@testing-library/user-event';
@@ -23,5 +23,18 @@ describe('Teste o componente <PokemonDetails.js />', () => {
 
     expect(summaryText).toBeInTheDocument();
     expect(resumeText).toBeInTheDocument();
+
+    const text = /Game Locations of Pikachu/i;
+    const textLocation = screen.queryByRole('heading', { name: text });
+    expect(textLocation).toBeInTheDocument();
+
+    const locations = screen.queryAllByAltText('Pikachu location');
+    console.log(locations);
+    const nameLocation = screen.queryByText('Kanto Viridian Forest');
+
+    expect(locations).toHaveLength(2);
+    expect(locations[0]).toBeInTheDocument();
+    expect(locations[1]).toBeInTheDocument();
+    expect(nameLocation).toBeInTheDocument();
   });
 });
