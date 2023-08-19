@@ -8,27 +8,23 @@ Nesse projeto escrevi testes para uma aplicação React que já está criada e c
 
  <h3>Habilidades usadas no projeto:</h3><br>
 
- <p>Utilizar os seletores (queries) da React-Testing-Library em testes automatizados;</p><br>
- <p>Simular eventos com a React-Testing-Library em testes automatizados</p><br>
- <p>Testar fluxos lógicos assíncronos com a React-Testing-Library</p><br>
- <p>Escrever testes que permitam a refatoração da estrutura dos componentes da aplicação sem necessidade de serem alterados</p><br>
- <p>Testar inputs</p><br>
+ <p>1. Utilizar os seletores (queries) da React-Testing-Library em testes automatizados;</p><br>
+ <p>2. Simular eventos com a React-Testing-Library em testes automatizados</p><br>
+ <p>3. Testar fluxos lógicos assíncronos com a React-Testing-Library</p><br>
+ <p>4. Escrever testes que permitam a refatoração da estrutura dos componentes da aplicação sem necessidade de serem alterados</p><br>
+ <p>5. Testar inputs</p><br>
  
  <h3> Requisitos do Projeto: </h3>
  
  <p> 
-  1.  1. Teste o componente <App.js /><br><br>
+  1.  1. Teste o componente App.js<br><br>
 
 Teste se o topo da aplicação contém um conjunto fixo de links de navegação<br>
 Teste se a aplicação é redirecionada para a página inicial, na URL / ao clicar no link Home da barra de navegação;<br>
-
 Teste se a aplicação é redirecionada para a página de About, na URL /about, ao clicar no link About da barra de navegação;<br>
-
 Teste se a aplicação é redirecionada para a página de Pokémons Favoritados, na URL /favorites, ao clicar no link Favorite Pokémons da barra de navegação;<br>
-
-Teste se a aplicação é redirecionada para a página Not Found ao entrar em uma URL desconhecida.<br>
-
-   <br><br>
+Teste se a aplicação é redirecionada para a página Not Found ao entrar em uma URL desconhecida.
+ <br><br>
 2. Crie um formulário para identificação
 Dentro do componente Login, que é renderizado na rota /, crie um formulário para que a pessoa usuária se identifique com um nome<br><br>
 3.  Crie um componente de cabeçalho
