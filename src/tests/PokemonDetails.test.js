@@ -29,12 +29,28 @@ describe('Teste o componente <PokemonDetails.js />', () => {
     expect(textLocation).toBeInTheDocument();
 
     const locations = screen.queryAllByAltText('Pikachu location');
+    const URL_01 = 'https://cdn2.bulbagarden.net/upload/0/08/Kanto_Route_2_Map.png';
     console.log(locations);
-    const nameLocation = screen.queryByText('Kanto Viridian Forest');
+    const nameLocation1 = screen.queryByText('Kanto Viridian Forest');
+    const nameLocation2 = screen.queryByText('Kanto Power Plant');
 
     expect(locations).toHaveLength(2);
     expect(locations[0]).toBeInTheDocument();
     expect(locations[1]).toBeInTheDocument();
-    expect(nameLocation).toBeInTheDocument();
+    expect(nameLocation1).toBeInTheDocument();
+    expect(nameLocation2).toBeInTheDocument();
+    expect(locations[0].src).toBe(URL_01);
+    const favoriteIcon = screen.queryByLabelText(/Pokémon favoritado?/i);
+
+    expect(favoriteIcon).toBeInTheDocument();
+
+    userEvent.click(favoriteIcon);
+
+    const starIcon = screen.queryByAltText('Pikachu is marked as favorite');
+
+    expect(starIcon).toBeInTheDocument();
+    userEvent.click(favoriteIcon);
+
+    expect(starIcon).not.toBeInTheDocument();
   });
 });
