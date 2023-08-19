@@ -6,6 +6,7 @@ Nesse projeto escrevi testes para uma aplicação React que já está criada e c
 
  </p>
 
+
  <h3>Habilidades usadas no projeto:</h3><br>
 
  <p>1. Utilizar os seletores (queries) da React-Testing-Library em testes automatizados;</p><br>
@@ -17,44 +18,56 @@ Nesse projeto escrevi testes para uma aplicação React que já está criada e c
  <h3> Requisitos do Projeto: </h3>
  
  <p> 
-  1.  1. Teste o componente App.js<br><br>
+  
+ 1. Teste o componente App.js<br><br>
 
-Teste se o topo da aplicação contém um conjunto fixo de links de navegação<br>
-Teste se a aplicação é redirecionada para a página inicial, na URL / ao clicar no link Home da barra de navegação;<br>
-Teste se a aplicação é redirecionada para a página de About, na URL /about, ao clicar no link About da barra de navegação;<br>
-Teste se a aplicação é redirecionada para a página de Pokémons Favoritados, na URL /favorites, ao clicar no link Favorite Pokémons da barra de navegação;<br>
-Teste se a aplicação é redirecionada para a página Not Found ao entrar em uma URL desconhecida.
- <br><br>
-2. Crie um formulário para identificação
-Dentro do componente Login, que é renderizado na rota /, crie um formulário para que a pessoa usuária se identifique com um nome<br><br>
-3.  Crie um componente de cabeçalho
-Crie um componente chamado Header, dentro da pasta src/components<br><br>
-4. Crie os links de navegação no cabeçalho
-Crie o link que redireciona para a página de pesquisa:<br>
-Crie o link que redireciona para a página de músicas favoritas:<br>
-Crie o link que redireciona para a página de exibição de perfil:
-<br><br>
-5.Crie o formulário para pesquisar artistas
-Este formulário deve conter um input e um botão para que seja possível pesquisar os álbums de uma banda ou artista.<br><br>
-6. Faça a requisição para pesquisar artistas
-Com a estrutura da tela de pesquisa criada, agora é hora de fazer uma requisição e receber a lista de álbums da banda ou artista pesquisada.<br><br>
-7.  Crie a lista de músicas do álbum selecionado
-Agora que está tudo pronto, você poderá exibir a lista de músicas do álbum selecionado.<br><br>
-8. Crie o mecanismo para adicionar músicas na lista de músicas favoritas
-Você já consegue listar as músicas dos álbuns. Nessa etapa você poderá marcar quais são as músicas que você mais gosta.<br><br>
-9. Faça a requisição para recuperar as músicas favoritas ao entrar na página do Álbum
-Ao entrar na página com a lista de músicas de um álbum, na rota /album/:id, as músicas que já foram favoritadas anteriormente devem estar com o checkbox marcado
-<br><br>
-10. Faça a requisição para recuperar as músicas favoritas e atualizar a lista após favoritar uma música
-Após adicionar uma música na lista de favoritas usando a função addSong (Requisito 8), faça uma requisição usando a função getFavoriteSongs para atualizar a lista de músicas favoritas<br><br>
-11. Crie o mecanismo para remover músicas na lista de músicas favoritas
-Depois de listar e favoritar as músicas de um álbum, você também deve poder remover uma música da lista de favoritas.<br><br>
-12.  Crie a lista de músicas favoritas
-Crie a lista dentro do componente Favorites, que é renderizado na rota /favorites.<br><br>
-13. Crie a exibição de perfil
-Crie a exibição do perfil dentro do componente Profile, que é renderizado na rota /profile<br><br>
-14. Crie o formulário de edição de perfil
-Crie o formulário de edição de perfil dentro do componente ProfileEdit, que é renderizado na rota /profile/edit.<br><br>
+    Teste se o topo da aplicação contém um conjunto fixo de links de navegação<br>
+    Teste se a aplicação é redirecionada para a página inicial, na URL / ao clicar no link Home da barra de navegação;<br>
+    Teste se a aplicação é redirecionada para a página de About, na URL /about, ao clicar no link About da barra de navegação;<br>
+    Teste se a aplicação é redirecionada para a página de Pokémons Favoritados, na URL /favorites, ao clicar no link Favorite Pokémons da barra de navegação;<br>
+    Teste se a aplicação é redirecionada para a página Not Found ao entrar em uma URL desconhecida.
+
+
+2. Teste o componente About.js
+
+Teste se a página contém as informações sobre a Pokédex;
+Teste se a página contém um heading h2 com o texto About Pokédex;
+Teste se a página contém dois parágrafos com texto sobre a Pokédex;
+Teste se a página contém a seguinte imagem de uma Pokédex: https://cdn2.bulbagarden.net/upload/thumb/8/86/Gen_I_Pok%C3%A9dex.png/800px-Gen_I_Pok%C3%A9dex.png.
+
+
+
+3.  Teste o componente FavoritePokemons.js
+
+Teste se é exibida na tela a mensagem No favorite pokemon found, caso a pessoa não tenha pokémons favoritos;
+Teste se são exibidos todos os cards de pokémons favoritados.
+
+4. Teste o componente NotFound.js
+
+Teste se a página contém um heading h2 com o texto Page requested not found 😭;
+Teste se a página mostra a imagem https://media.giphy.com/media/kNSeTs31XBZ3G/giphy.gif.
+
+5. Teste o componente Pokedex.js
+
+Teste se a página contém um heading h2 com o texto Encountered pokémons;
+Teste se é exibido o próximo pokémon da lista quando o botão Próximo pokémon é clicado:
+Teste se é mostrado apenas um pokémon por vez;
+Teste se a Pokédex tem os botões de filtro:
+Teste se a Pokédex contém um botão para resetar o filtro:
+
+6.  Teste o componente Pokemon.js
+
+Teste se é renderizado um card com as informações de determinado pokémon:
+Teste se o card do pokémon indicado na Pokédex contém um link de navegação para exibir detalhes deste pokémon. O link deve possuir a URL /pokemons/<id>, onde <id> é o id do pokémon exibido;
+Teste se ao clicar no link de navegação do pokémon, é feito o redirecionamento da aplicação para a página de detalhes de pokémon;
+Teste também se a URL exibida no navegador muda para /pokemon/<id>, onde <id> é o id do pokémon cujos detalhes se deseja ver;
+Teste se existe um ícone de estrela nos pokémons favoritados:
+
+7. Teste o componente PokemonDetails.js
+
+Teste se as informações detalhadas do pokémon selecionado são mostradas na tela:
+Teste se existe na página uma seção com os mapas contendo as localizações do pokémon:
+Teste se o usuário pode favoritar um pokémon através da página de detalhes:
 </p>
 
  
